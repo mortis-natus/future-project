@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.decouvar {
+  font-family: "Decovar Regular24";
+}
+
+.hot-fushia {
+  color: #FF1493;
+}
+
+.ultramarine {
+  color: #120052;
+}
+
+.hot-lilac {
+  color: #652EC7;
+}
+
+.cool-mint {
+  color: #00C2BA;
+}
+
+.spicy-mint {
+  color: #82E0BF;
+}
+
+/*
+  Morphing text
+modified from this: https://codepen.io/mandymichael/pen/YYaWop
+
+Photo by Danny Lines: https://unsplash.com/photos/ax04iLPMNeY
+*/
+@font-face {
+  font-family: "Decovar Regular24";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+}
+
+h1#subheading {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 3vw;
+  font-weight: 200;
+}
+
+h1#morphing-text {
+  margin: auto;
+  font-size: 20vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  position: relative;
+  font-weight: 100;
+  font-variation-settings: "INLN" 800, "SWRM" 1000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(assets/purple-painting.jpg);
+  background-size: 100%;
+  background-repeat: repeat;
+  text-shadow: 2px 2px 5px rgba(101, 46, 199, 0.4);
+  -webkit-animation: elevation 3s linear infinite alternate;
+          animation: elevation 3s linear infinite alternate;
+}
+h1#morphing-text:before {
+  text-shadow: 1px 1px 2px rgba(101, 46, 199, 0.5), -1px 1px 2px rgba(101, 46, 199, 0.5), -1px -1px 2px rgba(101, 46, 199, 0.5), 1px -1px 2px rgba(101, 46, 199, 0.5), 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+h1#morphing-text:after {
+  color: #421F00;
+  font-variation-settings: "INLN" 0;
+}
+
+@-webkit-keyframes elevation {
+  0% {
+    font-variation-settings: "INLN" 800, "SWRM" 1000;
+  }
+  100% {
+    font-variation-settings: "INLN" 800, "SWRM" 0;
+  }
+}
+
+@keyframes elevation {
+  0% {
+    font-variation-settings: "INLN" 800, "SWRM" 1000;
+  }
+  100% {
+    font-variation-settings: "INLN" 800, "SWRM" 0;
+  }
+}
+html {
+  height: 100%;
+}
+
+body {
+  /* background: radial-gradient(ellipse at center, #458D89 20%, #2A4E5A 80%);
+  height: 100vh; */
+  background: #120052;
+}
+
+h1#morphing-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75vw;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 0.6rem;
+}
+
+h1#morphing-text:after, h1#morphing-text:before {
+  content: attr(data-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ref-sheet {
+  max-width: 100vw;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+#illustration {
+  margin-bottom: 50px;
+}
+
+#animated-bg {
+
+}
