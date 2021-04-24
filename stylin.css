@@ -4,8 +4,12 @@
   border: 0;
 }
 
-.decouvar {
+.decovar {
   font-family: "Decovar Regular24";
+}
+
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .hot-fushia {
@@ -37,6 +41,7 @@ Photo by Danny Lines: https://unsplash.com/photos/ax04iLPMNeY
 @font-face {
   font-family: "Decovar Regular24";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+  unicode-range: U+0020-007F, U+00E8;
 }
 
 h1#subheading {
@@ -88,6 +93,9 @@ h1#morphing-text:after {
     font-variation-settings: "INLN" 800, "SWRM" 0;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@586&display=swap');
+
 html {
   height: 100%;
 }
@@ -121,6 +129,23 @@ h1#morphing-text:after, h1#morphing-text:before {
   top: 0;
 }
 
+.has-bg:after {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url("assets/purple-painting2.jpg") no-repeat top center;
+  -webkit-background-size: 2500px;
+  -moz-background-size: 2500px;
+  -o-background-size: 2500px;
+  background-size: 2500px;
+  background-color: #220a2f;
+}
+
 .ref-sheet {
   max-width: 100vw;
   margin: auto;
@@ -130,9 +155,52 @@ h1#morphing-text:after, h1#morphing-text:before {
 }
 
 #illustration {
+    margin: auto;
   margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+}
+
+.infoboxx {
+  background-color: #120052;
+  margin: 50px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.infoboxx p {
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 #animated-bg {
 
+}
+
+#fill {
+  width: 100vw;
+  height: 55vw;
+  background-color: #120052;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#wacky-title {
+  padding-bottom: 15vh;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding-bottom: 5vh;
+}
+
+footer p {
+  background-color: #120052;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 15px;
 }
